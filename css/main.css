@@ -227,6 +227,23 @@ textarea {
     color: #fff;
 }
 
+.email-btn {
+    display: inline-block;
+    margin-top: 15px;
+    font-weight: 400;
+    text-align: center;
+    vertical-align: middle;
+    cursor: pointer;
+    background-color: #ec683d; 
+    border: 1px solid transparent;
+    white-space: nowrap;
+    padding: 10px 50px;
+    font-size: 14px;
+    line-height: 1.428571429;
+    border-radius: 4px;
+    color: #fff;
+}
+
 /* Helper */
 .primary-color {
     color: #ec683d;
@@ -255,7 +272,8 @@ nav {
     overflow: hidden;
 }
 
-.flexslider img {
+.flexslider img,
+.contact-bg {
   /* Set rules to fill background */
   min-height: 100%;
   min-width: 1024px;
@@ -268,6 +286,7 @@ nav {
   position: fixed;
   top: 0;
   left: 0;
+  z-index: -1;
 }
 
 @media screen and (max-width: 1024px) { /* Specific to this particular image */
