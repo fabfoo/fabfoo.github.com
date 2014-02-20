@@ -1,0 +1,14 @@
+{
+	"app": {
+		"name": "fabfoo"
+	},
+	"captions": {
+		"caption1": "Explore the best restaurants in your neighborhood.",
+		"caption2": "Try a different cuisine for dinner.",
+		"caption3": "Build relationships through food."
+	},
+	"socialBox": {
+		"welcome": "Coming soon to your city",
+		"btn": "Stay updated on Facebook"
+	}
+}

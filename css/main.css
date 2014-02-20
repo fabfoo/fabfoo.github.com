@@ -1,3 +1,5 @@
+@import url('slider-animation.css');
+
 /*! HTML5 Boilerplate v4.3.0 | MIT License | http://h5bp.com/ */
 
 /*
@@ -97,291 +99,357 @@ textarea {
    Author's custom styles
    ========================================================================== */
 
-/* Make Header Sticky */
-.navbar-sticky-header {
-    width: 100%;
-    height: 60px;
-    position: fixed;
+/* ==========================================================================
+   Slider
+   ========================================================================== */
+
+.slider {
     top: 0;
     left: 0;
-    background-color: rgba(255, 255, 255, 0.2);
-    z-index: 1000;
-}
-
-.navbar-sticky-header .brand {
-    left: 120px;
-    position: relative;
-    width: 100px;
-    margin: 15px 0;
-}
-
-.navbar-sticky-header a {
-    position: relative;
-    display: inline-block;
-    margin: 15px 25px;
-    outline: none;
-    color: #fff;
-    text-decoration: none;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    font-weight: 600;
-    /*text-shadow: 0 0 1px rgba(255,255,255,0.3);*/
-    font-size: 1em;;
-}
-.navbar-sticky-header nav {
-    right: 120px;
-    position: relative;
-}
-.navbar-sticky-header a:last-child {
-    margin: 15px 0;
-}
-
-/* Make Footer Static */
-.navbar-static-footer {
-    width: 100%;
-    height: 80px;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    background-color: #fff;
-    z-index: 1000;
-
-}
-
-.navbar-static-footer a {
-    position: relative;
-    display: inline-block;
-    margin: 20px 25px;
-    outline: none;
-    color: #565759;
-    text-decoration: none;
-    text-transform: none;
-    letter-spacing: 1px;
-    font-weight: 600;
-    font-size: 0.95em;
-}
-
-/* Custom Flexslider */
-.flexslider {
+    position: fixed;  /* absolute -> layers effect */
     margin: 0;
-    max-height: 100%;
-    border: none;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    list-style:none;
 
-    max-width: 100%;
-    max-height: 100%;
-    bottom: 0;
-    left: 0;
-    margin: auto;
-    overflow: auto;
-    position: fixed;
-    right: 0;
-    top: 0;
     z-index: -1;
 }
-
-.flexslider .flex-caption {
-    top : 230px;
-    left: 120px;
-    max-width: 300px;
-    position: absolute;
-    color: #fff;
-    font-weight: 600;
-    font-size: 1.7em;
+.slider .slide {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    background-size: cover;
+    background-attachment: fixed;
 }
 
-/*Phones box*/
-.phones-box {
-    position: absolute;
-    top: 80px;
-    right: 120px;
-    height: 500px;
+.slider .slide-1 {
+    background-image: url('../img/slide1.png') !important;
+    background-position: center right;
+
+    -moz-animation:slideone 20s linear infinite;
+    -webkit-animation:slideone 20s linear infinite;
+
+    -moz-animation-play-state: paused;
+    -webkit-animation-play-state: paused;
 }
 
-/* Brand box*/
-.brand-box {
-    top : 160px;
-    left: 120px;
-    position: absolute;
-    display: inline-block;
+.slider .slide-2 {
+    background-image: url('../img/slide2.png') !important;
+    background-position: center center;
+
+    -moz-animation:slidetwo 20s linear infinite;
+    -webkit-animation:slidetwo 20s linear infinite;
+
+    -moz-animation-play-state: paused;
+    -webkit-animation-play-state: paused;
 }
 
-.brand-box .logo {
-    width: 70px;
+.slider .slide-3 {
+    background-image: url('../img/slide3.png') !important;
+    background-position: center left;
+
+    -moz-animation:slidethree 20s linear infinite;
+    -webkit-animation:slidethree 20s linear infinite;
+
+    -moz-animation-play-state: paused;
+    -webkit-animation-play-state: paused;
+
 }
 
-.brand-box .brand {
-    margin-left: 10px;
-    width: 180px;
+/* ==========================================================================
+   Header
+   ========================================================================== */
+
+.header {
+    background-color: rgba(255, 255, 255, 0.2);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 50px;
+}
+.header .brand {
+    height: 50px;
+}
+.header .brand img {
+    height: 26px;
+    padding: 12px 12px 12px 0;
+}
+.header nav {
+    display: block;
+    height: 50px;
 }
 
-/**/
-.social-box {
-    top : 400px;
-    left: 120px;
-    position: absolute;
-    display: inline-block;
-}
-
-.social-box .welcome {
-    color: #fff;
-    font-weight: 400;
-    font-size: 1.1em;
-}
-
-.social-box .fb-btn {
-    display: inline-block;
-    margin-top: 15px;
-    font-weight: 400;
-    text-align: center;
-    vertical-align: middle;
-    cursor: pointer;
-    background-color: #ec683d; 
-    border: 1px solid transparent;
-    white-space: nowrap;
-    padding: 10px 50px;
+.header nav a {
+    display: block;
+    color: white;
     font-size: 14px;
-    line-height: 1.428571429;
-    border-radius: 4px;
-    color: #fff;
+    padding: 15px 0 15px 15px;
+    text-transform: uppercase;
     text-decoration: none;
 }
 
+/* ==========================================================================
+   Content
+   ========================================================================== */
 
-/* Contact page */
-.email-btn {
-    display: inline-block;
-    margin-top: 15px;
-    font-weight: 400;
-    text-align: center;
-    vertical-align: middle;
-    cursor: pointer;
-    background-color: #ec683d; 
-    border: 1px solid transparent;
-    white-space: nowrap;
-    padding: 10px 50px;
-    font-size: 14px;
-    line-height: 1.428571429;
-    border-radius: 4px;
-    color: #fff;
+.content {
+    display: block;
+    position: relative;
+    bottom:0;
+    top:0;
+    left:0;
+    right:0;
+    height:100%;
+    margin-bottom:0;
+
+    overflow: auto;
+
 }
 
-.submit-btn {
-    display: inline-block;
-    margin-top: 15px;
-    font-weight: 400;
-    text-align: center;
-    vertical-align: middle;
-    cursor: pointer;
-    background-color: #ec683d; 
-    border: 1px solid transparent;
-    white-space: nowrap;
-    padding: 10px 50px;
-    font-size: 14px;
-    line-height: 1.428571429;
-    border-radius: 4px;
-    color: #fff;
+.content::-webkit-scrollbar { 
+    display: none; 
 }
 
-.contact-caption {
-    top : 230px;
-    left: 120px;
-    max-width: 300px;
+/* ==========================================================================
+   Brand Box, Welcome Box
+   ========================================================================== */
+
+.brand-box, .welcome-box {
     position: absolute;
-    color: #fff;
-    font-weight: 500;
-    font-size: 1.1em;
+    top: 5%;
+    display: table;
+    
+    width: 100%;
+    text-align: center;
 }
 
-.brand-box .welcome {
-    color: #fff;
-    font-weight: 600;
-    font-size: 2em;
-}
+/*.welcome-box {
+    margin: 5% auto 10px auto;
+}*/
 
-.right-block {
-    top: 160px;
-    left: 600px;
-    position: absolute;
-}
-
-.right-block {
-    background-color: rgba(255, 255, 255, 0.2);
-}
-.right-block > form > fieldset {
-    padding: 20px 30px;
-}
-
-.right-block > form > fieldset > input {
-    margin-top: 20px;
-    width: 400px;
+.brand-box .logo {
     height: 50px;
-    border: none;
-    padding: 10px 10px;
-    display: block;
 }
 
-.right-block > form > fieldset > textarea {
-    margin-top: 20px;
-    width: 400px;
-    height: 120px;
-    border: none;
-    padding: 10px 10px;
-    display: block;
+.brand-box .title {
+    margin-left: 10px;
+    height: 30px;
 }
 
-
-
-/* Helper */
-.primary-color {
-    color: #ec683d;
+.welcome-box .welcome {
+    color: white;
+    font-size: 50px;
 }
 
-.gray-color {
-    color: #565759;
+/* ==========================================================================
+   Captions Box
+   ========================================================================== */
+
+.captions {
+    position: relative;
+    top: 35%;
+    margin: auto;
+    display: table;
+    width: 100%;
 }
 
-nav {
+.captions .caption {
+    position: absolute;
+    color: white;
+    width: 100%;
+    text-align: center;
+    font-size: 20px;
+
+    opacity: 0;
+}
+
+.contact-page .captions {
+    position: relative;
+    top: 0;
+    margin: auto;
+    display: table;
+    width: 100%;
+    height: 100%;
+}
+
+.contact-page .captions .caption {
+    position : inherit;
+    display: table-cell;
+    vertical-align: middle;
+    color: white;
+    width: 100%;
+    text-align: center;
+    font-size: 16px;
+    opacity: 1;
+}
+
+.caption:first-child {
+    opacity: 1;
+}
+
+.fix-top {
+    margin-top: 20%;
+}
+
+.caption-1 {
+    -moz-animation:captionone 20s linear infinite;
+    -webkit-animation:captionone 20s linear infinite;
+
+    -moz-animation-play-state: paused;
+    -webkit-animation-play-state: paused;
+}
+
+.caption-2 {
+    -moz-animation:captiontwo 20s linear infinite;
+    -webkit-animation:captiontwo 20s linear infinite;
+
+    -moz-animation-play-state: paused;
+    -webkit-animation-play-state: paused;
+}
+
+.caption-3 {
+    -moz-animation:captionthree 20s linear infinite;
+    -webkit-animation:captionthree 20s linear infinite;
+
+    -moz-animation-play-state: paused;
+    -webkit-animation-play-state: paused;
+}
+
+/* ==========================================================================
+   Social Box, Email box
+   ========================================================================== */
+
+.social-box, .email-box {
+    position: absolute;
+    bottom: 5%;
+    display: table;
+
+    width: 100%;
+    text-align: center;
+}
+
+/*.email-box {
+    margin: 5% auto 10px auto;
+}*/
+
+.social-box .welcome {
+    margin-bottom: 10px;
+    color: white;
+    font-size: 15px;
+    text-align: center;
+}
+
+.social-box .btn,
+.email-box .btn {
+    padding: 10px 0;
+    color: #fff;
+    font-family: inherit;
+    font-size: 12px;
+    color: #EC683D;
+    background: #fff;
+    cursor: pointer;
     display: inline-block;
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: 1px;
+    font-weight: 700;
+    outline: none;
+    position: relative;
+    width: 100%;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    transition: all 0.3s;
 }
 
-.center {
-    margin: 0 auto;
-    display: table;
+
+
+/* ==========================================================================
+   Footer
+   ========================================================================== */
+
+.footer {
+    background-color: white;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    height: 55px;
 }
 
-.right {
-    display: table;
-    float: right;
+.footer nav {
+    height: 55px;
+}
+
+.footer nav a {
+    display: inline-block;
+    color: black;
+    font-size: 14px;
+    padding: 15px;
+    text-decoration: none;
+}
+
+.footer-icon {
+    height: 24px;
+}
+/* ==========================================================================
+   Phones box
+   ========================================================================== */
+
+.phones {
+    position: relative;
+    top: 100%;
+
+    width: 100%;
+    text-align: center;
+
+    padding-top: 30px;
+    padding-bottom: 15px;
+}
+
+.phones img {
+    width: 100%;
+}
+
+/* ==========================================================================
+   Container
+   ========================================================================== */
+.full-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.contact-bg {
+    background-image: url('../img/contact-bg.jpg') !important;
 }
 
 .container {
-    padding-bottom: 80px;
-    overflow: hidden;
+    position: relative;
+    
+    padding-left: 15px;
+    padding-right: 15px;
+
+    margin-left: auto;
+    margin-right: auto;
 }
 
-.flexslider img,
-.contact-bg {
-  /* Set rules to fill background */
-  min-height: 100%;
-  min-width: 1024px;
-    
-  /* Set up proportionate scaling */
-  width: 100%;
-  height: auto;
-    
-  /* Set up positioning */
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: -1;
+@media (min-width: 1200px) {
+    .container {
+        width: 970px;
+    }
 }
 
-@media screen and (max-width: 1024px) { /* Specific to this particular image */
-  img {
-    left: 50%;
-    margin-left: -512px;   /* 50% */
-  }
+@media (min-width: 1920px) {
+    .container {
+        width: 1250px;
+    }
 }
+
+
 
 
 
@@ -497,14 +565,193 @@ nav {
     *zoom: 1;
 }
 
+.pull-right {
+    float: right;
+}
+
+.pull-left {
+    float: left;
+}
+
+.center {
+    margin: 0 auto;
+    display: table;
+}
+
+.full-height {
+    height: 100%;
+}
+
 /* ==========================================================================
    EXAMPLE Media Queries for Responsive Design.
    These examples override the primary ('mobile first') styles.
    Modify as content requires.
    ========================================================================== */
 
-@media only screen and (min-width: 35em) {
+@media only screen and (min-width: 1200px) {
     /* Style adjustments for viewports that meet the condition */
+    .full-container {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+
+        overflow: hidden;
+    }
+
+    .content {
+        height:auto;
+        margin-bottom:55px;
+        position:absolute;
+    }
+
+    .footer {
+        position:fixed;
+    }
+
+    /* ==========================================================================
+       Brand Box, Welcome Box
+       ========================================================================== */
+    
+    .brand-box, .welcome-box {
+        position: absolute;
+        top: 10%;
+        display: table;
+        
+        width: 100%;
+        text-align: left;
+    }
+
+    .brand-box .logo {
+        height: 90px;
+    }
+
+    .brand-box .title {
+        margin-left: 15px;
+        height: 70px;
+    }
+
+    /* ==========================================================================
+       Captions Box
+       ========================================================================== */
+    
+    .captions,
+    .contact-page .captions {
+        position: relative;
+        top: 35%;
+        margin-left: 0;
+        display: table;
+        
+        width: 40%;
+        text-align: left;
+    }
+
+    .captions .caption,
+    .contact-page .captions .caption {
+        text-align: left;
+        color: white;
+        font-size: 35px;
+    }
+
+    .contact-page .captions {
+        top: 0;
+    }
+
+    .contact-page .captions .caption {
+        font-size: 20px;
+    }
+
+    /* ==========================================================================
+       Social Box, Email Box
+       ========================================================================== */
+
+    .social-box, .email-box {
+        position: absolute;
+        bottom: 20%;
+        display: table;
+
+        width: 100%;
+        text-align: left;
+    }
+
+    .social-box .welcome {
+        text-align: left;
+        margin-bottom: 10px;
+        color: white;
+        font-size: 20px;
+    }
+
+    .social-box .btn,
+    .email-box .btn {
+        text-align: center;
+        padding: 15px 10px;
+        border: 3px solid #fff;
+        color: #fff;
+        font-family: inherit;
+        font-size: inherit;
+        color: white;
+        background: none;
+        cursor: pointer;
+        display: inline-block;
+        text-transform: uppercase;
+        text-decoration: none;
+        letter-spacing: 1px;
+        font-weight: 700;
+        outline: none;
+        position: relative;
+        width: 30%;
+        -webkit-transition: all 0.3s;
+        -moz-transition: all 0.3s;
+        transition: all 0.3s;
+    }
+
+    .btn:after {
+        content: '';
+        position: absolute;
+        z-index: -1;
+        -webkit-transition: all 0.3s;
+        -moz-transition: all 0.3s;
+        transition: all 0.3s;
+    }
+
+    .btn:hover,
+    .btn:active {
+        color: #EC683D;
+        background: #fff;
+    }
+
+    /* ==========================================================================
+       Phones box
+       ========================================================================== */
+
+    .phones {
+        float: right;
+        position: relative;
+        top: 5%;
+        margin-right: 0;
+        display: table;
+        text-align: left;
+        width: auto;
+
+        padding: 0;
+    }
+
+    .phones img {
+        width: auto;
+    }
+
+    /* ==========================================================================
+       Footer
+       ========================================================================== */
+
+    .footer nav a {
+        display: inline-block;
+        color: black;
+        font-size: 14px;
+        padding: 10px 20px;
+        text-decoration: none;
+    }
 }
 
 @media print,

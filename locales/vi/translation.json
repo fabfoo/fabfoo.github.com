@@ -1,0 +1,14 @@
+{
+	"app": {
+		"name": "fabfoo"
+	},
+	"captions": {
+		"caption1": "Khám phá những nhà hàng tốt nhất gần bạn.",
+		"caption2": "Thử một món ăn mới lạ cho bữa tối.",
+		"caption3": "Kết nối bạn bè thông qua các món ăn."
+	},
+	"socialBox": {
+		"welcome": "Sắp có mặt tại thành phố của bạn.",
+		"btn": "Cập nhật thông tin tại Facebook"
+	}
+}
