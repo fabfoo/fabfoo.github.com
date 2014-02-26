@@ -52,8 +52,10 @@ $(window).load(function() {
 function setAnimation (playState) {
 	$('.slide').each(function (index, item) {
 		$(item).css("-webkit-animation-play-state", playState);
+		$(item).css("-moz-animation-play-state", playState);
 	});
 	$('.caption').each(function (index, item) {
 		$(item).css("-webkit-animation-play-state", playState);
+		$(item).css("-moz-animation-play-state", playState);
 	});
 }
